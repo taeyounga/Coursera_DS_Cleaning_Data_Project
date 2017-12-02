@@ -7,6 +7,8 @@ This Code book describes the variables, the data, and any transformations or wor
 
 ## Measurements
 -  79 variables
+
+
 1                tBodyAcc-mean()-X
 2                tBodyAcc-mean()-Y
 3                tBodyAcc-mean()-Z
