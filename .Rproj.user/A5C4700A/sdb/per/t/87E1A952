@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages(\"dplyr\")\ninstall.packages(\"tidyr\")\nlibrary(dplyr)\nlibrary(tidyr)\n\nfeatures <- read.table(\"features.txt\")\nactivity_labels <- read.table(\"activity_labels.txt\")\nxtest <- read.table(\"test/X_test.txt\")\nytest <- read.table(\"test/y_test.txt\")\nsubject_test <- read.table(\"test/subject_test.txt\")\nnames(subject_test) <- \"Subject\"\n\nselected_features_labeled <- grep(\".*mean.*|.*std.*\",features[,2] , value = TRUE)\nselected_features <- grep(\".*mean.*|.*std.*\",features[,2])\n\nxtest2 <- xtest[selected_features]\nnames(xtest2) <- selected_features_labeled\n\nytest2 <- merge(x = ytest, y = activity_labels, by.x = \"V1\", sort = FALSE)\nnames(ytest2) <- c(\"ActivityCode\", \"Activity\")\ntest_set <- cbind(subject_test, ytest2[2], xtest2)\n\nxtrain <- read.table(\"train/X_train.txt\")\nytrain <- read.table(\"train/y_train.txt\")\nsubject_train <- read.table(\"train/subject_train.txt\")\nnames(subject_train) <- \"Subject\"\n\nxtrain2 <- xtrain[selected_features]\nnames(xtrain2) <- selected_features_labeled\n\nytrain2 <- merge(x = ytrain, y = activity_labels, by.x = \"V1\", sort = FALSE)\nnames(ytrain2) <- c(\"ActivityCode\", \"Activity\")\ntrain_set <- cbind(subject_train, ytrain2[2], xtrain2)\n\n#Combine train_set and test_set\ncombined_set <- rbind(train_set, test_set)\n",
+    "created" : 1512053707898.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "342987117",
+    "id" : "87E1A952",
+    "lastKnownWriteTime" : 1512056582,
+    "last_content_update" : 1512056582095,
+    "path" : "~/Coursera_DS_Getting_And_Cleaning_Data/run_analysis.R",
+    "project_path" : "run_analysis.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

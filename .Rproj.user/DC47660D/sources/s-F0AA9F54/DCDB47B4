@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1512086232288.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DCDB47B4",
+    "lastKnownWriteTime" : 1512176365,
+    "last_content_update" : 1512176365507,
+    "path" : "C:/Project/Coursera_DS_Getting_And_Cleaning_Data/run_analysis.R",
+    "project_path" : "run_analysis.R",
+    "properties" : {
+        "cursorPosition" : "47,0",
+        "scrollLine" : "40"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

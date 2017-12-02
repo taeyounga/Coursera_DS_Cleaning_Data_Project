@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\nfeatures <- read.table(\"features.txt\")\nfeatures[2]\nstr(features)\nactivity_labels <- read.table(\"activity_labels.txt\")\nactivity_labels\n\nwanted_features <- grep(\".*mean.*|.*std.*\", features[,2])\n\nwanted_features_lable <- features[wanted_features,2]\n\nxtrain <- read.table(\"train/X_train.txt\")[wanted_features]\nytrain <- read.table(\"train/y_train.txt\")\nsubject_train <- read.table(\"train/subject_train.txt\")\ntrain <- cbind(subject_train, ytrain, xtrain)\ntrain\n\nxtest <- read.table(\"test/X_test.txt\")[wanted_features]\nxtest <- read.table(\"test/X_test.txt\")\nytest <- read.table(\"test/y_test.txt\")\nsubject_test <- read.table(\"test/subject_test.txt\")\ntest <- cbind(subject_test, ytest, xtest)\n\ncombined <- rbind(train,test)\n\ncolnames(combined)\n\nnames(combined) <- c(\"subject\", \"activity\", wanted_features_lable)\nnames(combined)\n",
+    "created" : 1511791858162.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "692796134",
+    "id" : "5F9C0BCF",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1512053036926,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
