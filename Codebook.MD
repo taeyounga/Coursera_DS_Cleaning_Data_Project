@@ -6,8 +6,7 @@ This Code book describes the variables, the data, and any transformations or wor
 -  Activity - The type of activity performed when the corresponding measurments were taken
 
 ## Measurements
--  79 variables
-
+79 variables
 
 1                tBodyAcc-mean()-X
 2                tBodyAcc-mean()-Y
